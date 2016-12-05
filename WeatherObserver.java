@@ -21,7 +21,7 @@ public class WeatherObserver implements Observer {
 
     WeatherObserver(Subject sub){
         this.mySubject = sub;
-        this.mySubject.register(this);
+        sub.register(this);
         uniqueIdTracker = ++idCounter;
         System.out.println("the new observer has been added unique Id : " +  this.uniqueIdTracker);
 
